@@ -14,29 +14,17 @@
 
 char		*ft_strtrim(char const *s)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
-	char			*str;
+	size_t		len;
+	char		*new_str;
 
-	i = 0;
-	k = 0;
-	if (!s)
+	while (*s && (*s == ' ' || *s == '\t'))
+		s++;
+	len = ft_strlen(s);
+	while (*s && (s[--len] == ' ' || s[--len] == '\t'))
+		;
+	if (!(new_str = ft_strnew(len)))
 		return (NULL);
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	if (s[i] == '\0')
-		return (ft_strcpy(ft_memalloc(sizeof(char) * 2), ""));
-	j = ft_strlen(s) - 1;
-	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
-		j--;
-	if (!(str = (char *)malloc(sizeof(char) * (j - i + 2))))
-		return (NULL);
-	while (k < j - i + 1)
-	{
-		str[k] = s[i + k];
-		k++;
-	}
-	str[k] = '\0';
-	return (str);
+	new_str = ft_strncpy(new_str, s, len + 1);
+	new_str[len + 1] = '\0';
+	return ((char*)new_str);
 }

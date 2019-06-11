@@ -14,19 +14,25 @@
 
 char	*ft_strrev(char *str)
 {
+	int		len;
+	int		j;
 	int		i;
-	int		l;
-	char	t;
+	char	temp;
 
-	l = 0;
-	while (str[l] != '\0')
-		l++;
-	i = -1;
-	while (++i < --l)
+	length = 0;
+	while (str[len] != '\0')
 	{
-		t = str[i];
-		str[i] = str[l];
-		str[l] = t;
+		len++;
+	}
+	i = 0;
+	j = len - 1;
+	while (i < j)
+	{
+		temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
+		i++;
+		j--;
 	}
 	return (str);
 }

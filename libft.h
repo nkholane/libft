@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:54:40 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/10 16:45:23 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/12 17:26:02 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		t_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	ft_putchar(char c);
-void	ft_putstr(char const *s);
+void	ft_putstr(const char *str);
 void	ft_putendl(char const *s);
 void	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);

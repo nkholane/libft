@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:16:03 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/07 14:10:10 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/12 17:34:56 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrev(char *str)
 	int		i;
 	char	temp;
 
-	length = 0;
+	len = 0;
 	while (str[len] != '\0')
 	{
 		len++;

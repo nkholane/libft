@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 13:54:31 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/11 17:07:43 by nkholane         ###   ########.fr       */
+/*   Created: 2019/06/13 17:45:13 by nkholane          #+#    #+#             */
+/*   Updated: 2019/06/13 17:47:26 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	size_t	i;
 

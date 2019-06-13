@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 17:41:55 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/11 17:42:10 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/13 17:34:07 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	}
 	new[i] = '\0';
 	return (new);
-
 }

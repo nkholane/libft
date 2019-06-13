@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:05:35 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/05 15:05:39 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/13 17:33:31 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	return (new);
-
 }

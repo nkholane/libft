@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 17:12:17 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/13 17:13:06 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:55:34 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
-int		t_isprint(int c);
+int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	ft_putchar(char c);

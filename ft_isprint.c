@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 12:56:21 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/13 18:21:51 by nkholane         ###   ########.fr       */
+/*   Created: 2019/06/14 11:53:43 by nkholane          #+#    #+#             */
+/*   Updated: 2019/06/14 11:57:13 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c > 31 && c < 127);
 }

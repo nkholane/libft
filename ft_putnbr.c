@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/13 17:00:48 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/13 17:37:30 by nkholane         ###   ########.fr       */
+/*   Created: 2019/06/14 15:42:26 by nkholane          #+#    #+#             */
+/*   Updated: 2019/06/14 15:51:59 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 
 void	ft_putnbr(int n)
 {
-	if (n < 0)
+	if (!n)
+		return ;
+	else if (n < 0)
 	{
 		ft_putchar('-');
-		n = n * -1;
+		ft_putnbr(-n); // n = n * -1;
 	}
-	if ((n / 10) > 0)
-		ft_putnbr(n / 10);
-	ft_putchar(n % 10 + 48);
+	if (n > 9)
+	{
+	ft_putnbr(n / 10);
+	ft_putnbr(n % 10);
+	}
+	else
+	{
+		ft_putchar(n + '0');
+	}
 }

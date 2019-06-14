@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 13:49:08 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/13 17:48:08 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/14 15:51:02 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (!n)
+		return ;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);

@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:14:11 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/05 15:14:16 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/15 16:32:45 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 char		*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size + 1));
+	char *str;
+
+   	str= (char *)ft_memalloc(size + 1);
+	if (str == NULL)
+		return (NULL);
+	return (str);
 }

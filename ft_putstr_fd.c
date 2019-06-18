@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 17:45:13 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/15 16:34:53 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/18 16:40:48 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_putstr_fd(const char *s, int fd)
 {
 	size_t	i;
+
 	if (s == NULL)
 		return ;
 	i = 0;

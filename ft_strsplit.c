@@ -6,13 +6,13 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:17:07 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/20 16:46:53 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/21 13:38:27 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	word(const char *str, char c)
+static size_t	word(char const *str, char c)
 {
 	int i;
 
@@ -41,8 +41,7 @@ char			**ft_strsplit(char const *s, char c)
     j = 0;
     if (s == NULL)
         return (NULL);
-    result = (char **)malloc(sizeof(char *)* (word((char *)s, c) + 1));
-    if (result == NULL)
+    if (!(result = (char **)malloc(sizeof(char *)* (word(s, c) + 1))))
         return (NULL);
     while (s[i])
     {

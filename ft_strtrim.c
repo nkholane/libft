@@ -32,12 +32,3 @@ char		*ft_strtrim(char const *s)
 	new_str[len + 1] = '\0';
 	return ((char*)new_str);
 }
-
-int		main(void)
-{
-	char trim[] = " trim this string for me ";
-	char trim1[] = "   i *----*-     trim is this way   66**- 678      ";
-	printf("trim string =>%s\n", ft_strtrim(trim));
-	printf("trim string1 =>%s\n", ft_strtrim(trim1));
-	return (0);
-}

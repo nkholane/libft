@@ -6,77 +6,55 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:17:07 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/20 15:55:35 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/24 12:57:54 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_wcount(const char *s, char c)
+static int	count_words(char *s, char d)
 {
-	size_t	ctrl;
-	int		num;
+	int		i;
+	int		count;
 
-	ctrl = 0;
-	num = 0;
-	if (s[ctrl] != c)
-		num++;
-	while (s[ctrl])
+	i = 0;
+	count = 0;
+	while (s[i])
 	{
-		if (s[ctrl] == c && s[ctrl + 1] != c && s[ctrl + 1] != '\0')
-			num++;
-		ctrl++;
+		while (s[i] == d && s[i] != '\0')
+			i++;
+		if (s[i] != d && s[i] != '\0')
+			count++;
+		while (s[i] != d && s[i] != '\0')
+			i++;
 	}
-	return (num);
+	return (count);
 }
 
-static	int			ft_len(const char *s, char c)
+char		**ft_strsplit(char const *s, char d)
 {
-	int		start;
+	size_t		i;
+	size_t		j;
+	size_t		k;
+	char		**res;
 
-	start = 0;
-	while (s[start] && s[start] != c)
-		start++;
-	return (start);
-}
-
-static char			**ft_split(char const *s, char c, size_t i, size_t row)
-{
-	size_t	col;
-	char	**a;
-
-	if (!(a = (char**)malloc(sizeof(char*) * ft_wcount(s, c) + 1)))
+	i = 0;
+	j = 0;
+	if (s == NULL)
+		return (NULL);
+	res = (char **)malloc(sizeof(char *) * (count_words((char *)s, d) + 1));
+	if (res == NULL)
 		return (NULL);
 	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == d)
 			i++;
-		else
-		{
-			col = 0;
-			if (!(a[row] = (char*)malloc(sizeof(char) * ft_len(&s[i], c) + 1)))
-				return (NULL);
-			else
-			{
-				while (s[i] && s[i] != c)
-					a[row][col++] = s[i++];
-				a[row][col] = '\0';
-				row++;
-			}
-		}
+		k = i;
+		while (s[i] && s[i] != d)
+			i++;
+		if (i > k)
+			res[j++] = ft_strsub(s, k, i - k);
 	}
-	a[row] = 0;
-	return (a);
-}
-
-char				**ft_strsplit(char const *s, char c)
-{
-	size_t		ctrl;
-	size_t		col;
-
-	ctrl = 0;
-	col = 0;
-	if (!s)
-		return (NULL);
-	return (ft_split(s, c, ctrl, col));
+	res[j] = NULL;
+	return (res);
 }

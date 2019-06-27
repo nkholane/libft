@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 17:12:17 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/14 11:55:34 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/27 13:37:38 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,11 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_islower(int c);
+int		ft_isupper(int c);
 void	ft_putchar(char c);
 void	ft_putstr(const char *str);
 void	ft_putendl(char const *s);

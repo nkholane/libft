@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 15:17:51 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/24 12:48:29 by nkholane         ###   ########.fr       */
-/*   Updated: 2019/06/22 02:49:24 by nkholane         ###   ########.fr       */
+/*   Created: 2019/06/27 13:59:29 by nkholane          #+#    #+#             */
+/*   Updated: 2019/06/27 13:59:38 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	size_t	start;
 	size_t	len;

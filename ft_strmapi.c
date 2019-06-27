@@ -6,7 +6,7 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 15:05:35 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/18 15:03:02 by nkholane         ###   ########.fr       */
+/*   Updated: 2019/06/27 12:59:59 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,21 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	char			*new;
+	char	*new;
+	size_t	len;
 
-	if (s != NULL)
-	{
-		new = (char *)(malloc(sizeof(char) * (ft_strlen(s)) + 1));
-	i = 0;
-	if (new == NULL)
+	if (s == NULL && f == NULL)
 		return (NULL);
-	while (s[i])
+	len = ft_strlen(s);
+	new = (char*)malloc(sizeof(char) * (1 + len));
+	if (!new)
+		return (NULL);
+	len = 0;
+	while (s[len])
 	{
-		new[i] = f(i, s[i]);
-		i++;
+		new[len] = f(len, s[len]);
+		len++;
 	}
+	new[len] = '\0';
 	return (new);
 }
-
-unsigned int	i;
-	char			*str;
-
-	i = 0;
-	if (s != NULL)
-	{
-		str = (char *)(malloc(sizeof(char) * (ft_strlen(s)) + 1));
-		
-			str[i] = f(i, s[i]);
-			i++;
-		}
-		str[i] = '\0';
-		return (str);
-	}
-	return (NULL);
-}if (s == NULL)
-			return (NULL);
-		while (s[i] != '\0')
-		{

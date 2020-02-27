@@ -6,16 +6,26 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 17:12:17 by nkholane          #+#    #+#             */
-/*   Updated: 2019/06/27 13:37:38 by nkholane         ###   ########.fr       */
+/*   Updated: 2020/02/25 13:19:08 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
+# define MAX_NUM(x,y) (x > y) ? x : y
+# define MIN_NUM(x,y) (x < y) ? x : y
+# define ABS(x) (x < 0) ? (x * (-1)) : x
+# define BUFF_SIZE 32
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
 
 void	*ft_memset(void *b, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -73,5 +83,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_swap(int *a, int *b);
+int		get_next_line(const int fd, char **line);
 
 #endif

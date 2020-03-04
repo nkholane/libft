@@ -5,23 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/25 13:23:24 by nkholane          #+#    #+#             */
-/*   Updated: 2020/02/25 13:23:26 by nkholane         ###   ########.fr       */
+/*   Created: 2020/03/02 11:38:22 by nkholane          #+#    #+#             */
+/*   Updated: 2020/03/02 11:43:34 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_delstrs(char ***str)
+void	ft_delstrs(char ***str)
 {
-    int     i;
+	int i;
 
-    i = 0;
-    while (*str[0][i] != '\0')
-    {
-        ft_strdel(&(str[0][i]));
-        i++;
-    }
-    free(str[0]);
-    str[0] = NULL;
+	i = 0;
+	while (*str[0][i] != '\0')
+	{
+		ft_strdel(&(str[0][i]));
+		i++;
+	}
+	free(str[0]);
+	str[0] = NULL;
 }

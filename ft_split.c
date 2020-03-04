@@ -6,13 +6,13 @@
 /*   By: nkholane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 13:26:21 by nkholane          #+#    #+#             */
-/*   Updated: 2020/02/25 13:26:24 by nkholane         ###   ########.fr       */
+/*   Updated: 2020/03/04 13:13:11 by nkholane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	r_size(char *s)
+static	int	r_size(char *s)
 {
 	int	len;
 
@@ -33,13 +33,12 @@ static int	r_size(char *s)
 
 char		**ft_split(char *str)
 {
-	int	i;
-	int	j;
-	int	k;
-	int	w_len;
+	int		i;
+	int		j;
+	int		k;
+	int		w_len;
 	char	**ret;
 
-	i = 0;
 	j = 0;
 	w_len = 0;
 	ret = (char **)malloc(sizeof(char *) * (r_size(str) + 1));
